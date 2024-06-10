@@ -2,6 +2,7 @@ import { Api } from "../api/api";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
+import "./Create.css";
 
 export default function Create() {
   const navigate = useNavigate();
@@ -28,12 +29,11 @@ export default function Create() {
   }
 
   return (
-    <div>
-      <h1>Criar Devmon</h1>
+    <div className="formulario">
+      <h1>Cadastrar Curso</h1>
 
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="nome">Nome</label>
           <input
             type="text"
             name="nome"
@@ -43,7 +43,6 @@ export default function Create() {
         </div>
 
         <div>
-          <label htmlFor="imagem">URL da imagem</label>
           <input
             type="text"
             name="imagem"
@@ -53,12 +52,11 @@ export default function Create() {
         </div>
 
         <div>
-          <label htmlFor="categoria">Categoria (opcional)</label>
           <input
             type="text"
             name="categoria"
             id="categoria"
-            placeholder="Digite a categoria"
+            placeholder="Digite a categoria (opcional)"
           />
         </div>
 
